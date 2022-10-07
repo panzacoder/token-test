@@ -6,9 +6,9 @@ name: Shipwright Test
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,5 +27,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Shipwright Tokens
-        uses: headwayio/shipwright-tokens@v0.1.1-beta
-
+        # uses: ../../../shipwright-tokens/action.yml
+        # uses: headwayio/shipwright-tokens@v0.1.1-beta
+        uses: headwayio/shipwright-tokens@chore/test-branch
